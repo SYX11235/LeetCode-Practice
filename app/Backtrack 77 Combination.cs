@@ -12,7 +12,7 @@ public class Solution77
     {
         if (track.Count == k)
         {
-            res.Add(track);
+            res.Add(new List<int>(track));
             return;
         }
         for (int i = start; i <= n; i++)
@@ -20,7 +20,6 @@ public class Solution77
             track.Add(i);
             Backtrack(i + 1, n, k);
             track.RemoveAt(track.Count - 1);
-
         }
     }
 }
