@@ -28,14 +28,11 @@ public class Solution39
 
         for (int i = start; i < candidates.Length; i++)
         {
-            track.Add(i);
+            track.Add(candidates[i]);
             trackSum = trackSum + candidates[i];
             this.Backtrack(candidates, i, target);
             track.RemoveAt(track.Count - 1);
             trackSum = trackSum - candidates[i];
         }
-        
     }
-    
-
 }

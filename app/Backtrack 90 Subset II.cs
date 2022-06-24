@@ -2,7 +2,7 @@ public class Solution90
 {
     private IList<IList<int>> res = new List<IList<int>>();
     private List<int> track = new List<int>();
-    public IList<IList<int>> Subsets2(int[] nums)
+    public IList<IList<int>> SubsetsWithDup(int[] nums)
     {
         Array.Sort(nums);
         Backtrack(nums, 0);

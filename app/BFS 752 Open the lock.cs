@@ -20,7 +20,7 @@
         return new String(ch);
     }
 
-    int BFS(String[] deadends, String target)
+    public int OpenLock(String[] deadends, String target)
     {
         Queue<String> q = new Queue<String>();
         q.Enqueue("0000");
@@ -29,7 +29,6 @@
         {
             visited.Add(item);
         }
-        visited.Add("0000");
         int step = 0;
 
         while (q.Count != 0)
@@ -38,16 +37,18 @@
             for (int i = 0; i < sz; i++)
             {
                 String cur = q.Dequeue();
+                
+                if (cur == target)
+                {
+                    return step;
+                }
 
                 if (visited.Contains(cur))
                 {
                     continue;
                 }
 
-                if (cur == target)
-                {
-                    return step;
-                }
+                visited.Add(cur);
 
                 for (int j = 0; j < 4; j++)
                 {
@@ -55,14 +56,12 @@
                     if (!visited.Contains(up))
                     {
                         q.Enqueue(up);
-                        visited.Add(up);
                     }
 
                     String down = minusOne(cur, j);
                     if (!visited.Contains(down))
                     {
                         q.Enqueue(down);
-                        visited.Add(down);
                     }
                 }
             }
