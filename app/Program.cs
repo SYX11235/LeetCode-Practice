@@ -1,13 +1,8 @@
-var solution = new Solution752();
+var solution = new Leetcode309.Solution();
 
-String[] deadends = new String[]
-{
-    "0201","0101","0102","1212","2002"
-};
+var prices = new int[]{2,1,4};
 
-var target = "0202";
-
-var res = solution.OpenLock(deadends, target);
+var res = solution.MaxProfit(prices);
 
 Console.WriteLine(res);
 
