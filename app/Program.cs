@@ -1,10 +1,10 @@
-var solution = new Leetcode26.Solution();
+var solution = new Leetcode283.Solution();
 
-var nums = new int[]{1,1,1,2,2,2,3,3,3,3,3,3,3};
+var nums = new int[]{4,2,0,2,2,1,4,4,1,4,3,2};
 
-var res = solution.RemoveDuplicates(nums);
+solution.MoveZeroes(nums);
 
-Console.WriteLine(res);
+Console.WriteLine();
 
 
 
