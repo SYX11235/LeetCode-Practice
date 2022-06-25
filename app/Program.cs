@@ -1,8 +1,8 @@
-var solution = new Leetcode15.Solution();
+var solution = new Leetcode26.Solution();
 
-var nums = new int[]{-1,0,1,2,-1,-4};
+var nums = new int[]{1,1,1,2,2,2,3,3,3,3,3,3,3};
 
-var res = solution.ThreeSum(nums);
+var res = solution.RemoveDuplicates(nums);
 
 Console.WriteLine(res);
 
