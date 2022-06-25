@@ -1,8 +1,8 @@
-var solution = new Leetcode309.Solution();
+var solution = new Leetcode1.Solution();
 
-var prices = new int[]{2,1,4};
+var nums = new int[]{3,3};
 
-var res = solution.MaxProfit(prices);
+var res = solution.TwoSum(nums, 6);
 
 Console.WriteLine(res);
 
