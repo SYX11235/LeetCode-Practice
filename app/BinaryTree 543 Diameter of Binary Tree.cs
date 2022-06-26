@@ -19,22 +19,8 @@ namespace Leetcode543
         int maxDiameter = 0;
         public int DiameterOfBinaryTree(TreeNode root)
         {
-            Traverse(root);
+            GetMaxDepth(root);
             return maxDiameter;
-
-        }
-
-        private void Traverse(TreeNode root)
-        {
-            if (root == null)
-            {
-                return;
-            }
-            int maxLeft = GetMaxDepth(root.left);
-            int maxRight = GetMaxDepth(root.right);
-            maxDiameter = Math.Max(maxLeft + maxRight, maxDiameter);
-            Traverse(root.left);
-            Traverse(root.right);
         }
 
         private int GetMaxDepth(TreeNode root)
@@ -45,6 +31,8 @@ namespace Leetcode543
             }
             int maxLeft = GetMaxDepth(root.left);
             int maxRight = GetMaxDepth(root.right);
+            int currentDiameter = maxLeft + maxRight;
+            maxDiameter = Math.Max(currentDiameter, maxDiameter);
             return Math.Max(maxLeft, maxRight) + 1;
         }
     }
