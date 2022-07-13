@@ -1,10 +1,11 @@
-var solution = new Leetcode5.Solution();
+var solution = new Leetcode135.Solution();
 
-var nums = new int[] { 4, 2, 0, 2, 2, 1, 4, 4, 1, 4, 3, 2 };
+var nums = new int[] { 1,2,87,87, 87, 2, 1 };
 
-solution.LongestPalindrome("babad");
+string[] s = { "flower", "flow", "flight" };
+var res = solution.Candy(nums);
 
-Console.WriteLine();
+Console.WriteLine(res);
 
 
 // int[][] tmp = new int[][]
